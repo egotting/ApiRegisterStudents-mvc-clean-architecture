@@ -1,0 +1,6 @@
+@crudv3_HostAddress = http://localhost:5294
+
+GET {{crudv3_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

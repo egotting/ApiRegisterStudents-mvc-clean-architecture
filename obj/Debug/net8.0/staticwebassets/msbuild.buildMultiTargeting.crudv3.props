@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../build/crudv3.props" />
+</Project>

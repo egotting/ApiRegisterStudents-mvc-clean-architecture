@@ -4,20 +4,18 @@ namespace Crudv3.Models.DTO.Student;
 
 public record StudentRequestDTO(
     [Required(ErrorMessage = "O campo nome é obrigatorio")]
-    [MaxLength(100, ErrorMessage = "O campo Nome precisa ter no maximo 100 caracteres")]
-    string? FirstName, 
-    
-    [Required(ErrorMessage = "O campo Sobrenome é obrigatorio")]
-    [MaxLength(100, ErrorMessage = "O campo nome precisa ter no maximo 100 caracteres")]
-    string? LastName, 
-    
-    [Required(ErrorMessage = "O campo idade é obrigatorio")]
-    int? Age,
-    
+    string FirstName,
     [Required(ErrorMessage = "O campo nome é obrigatorio")]
-    [MaxLength(100, ErrorMessage = "O campo nome precisa ter no maximo 100 caracteres")]
-    string? Identidade,
-    
+    string LastName,
     [Required(ErrorMessage = "O campo nome é obrigatorio")]
-    [MaxLength(100, ErrorMessage = "O campo nome precisa ter no maximo 100 caracteres")]
-    string? Matricula);
+    int Age,
+    [Required(ErrorMessage = "O campo nome é obrigatorio")]
+    string Identidade,
+    [Required(ErrorMessage = "O campo nome é obrigatorio")]
+    string Matricula);
+
+public record UpdateNameStudentDTO(
+    [Required(ErrorMessage = "O campo nome é obrigatorio")]
+    string FirstName,
+    [Required(ErrorMessage = "O campo nome é obrigatorio")]
+    string LastName);

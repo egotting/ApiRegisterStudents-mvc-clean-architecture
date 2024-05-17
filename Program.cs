@@ -24,12 +24,8 @@ var app = builder.Build();
 //app.UseHttpsRedirection();
 app.UseRouting();
 
-app.UseEndpoints(endpoint =>
-{
-    endpoint.MapControllers();
-});
+app.UseEndpoints(endpoint => { endpoint.MapControllers(); });
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();

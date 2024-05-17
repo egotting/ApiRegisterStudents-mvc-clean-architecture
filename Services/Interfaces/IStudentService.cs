@@ -8,7 +8,9 @@ public interface IStudentService
     IEnumerable<StudentResponseDTO> GetAll();
     DBStudentsModels GetStudentById(string identidade);
 
-    StudentResponseDTO SaveStudent( StudentRequestDTO studentRequestDto);
+    StudentResponseDTO SaveStudent(StudentRequestDTO studentResponseDto);
 
-    
+     bool DeleteStudentById(string identidade);
+
+     StudentResponseDTO UpdateNameStudent(string identidade, UpdateNameStudentDTO request);
 }

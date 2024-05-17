@@ -23,14 +23,28 @@ public class StudentRepository : IStudentsRepository
     public DBStudentsModels GetStudentById(string identidade)
     {
         return _context.DBStudents.Where(d => d.Identidade == identidade)
-            .FirstOrDefault(x => x.Identidade == identidade) ?? 
+                   .FirstOrDefault(x => x.Identidade == identidade) ??
                throw new NotFoundStudent("Not found this student");
     }
 
     public DBStudentsModels SaveStudent(DBStudentsModels newStudent)
     {
-         _context.DBStudents.Add(newStudent);
-         _context.SaveChangesAsync();
-         return newStudent;
+        _context.DBStudents.Add(newStudent);
+        _context.SaveChangesAsync();
+        return newStudent;
+    }
+
+    public bool DeleteStudent(DBStudentsModels student)
+    {
+        _context.DBStudents.Remove(student);
+        _context.SaveChanges();
+        return true;
+    }
+
+    public DBStudentsModels UpdateStudent(DBStudentsModels student)
+    {
+        _context.Entry(student).State = EntityState.Modified;
+        _context.SaveChanges();
+        return student;
     }
 }

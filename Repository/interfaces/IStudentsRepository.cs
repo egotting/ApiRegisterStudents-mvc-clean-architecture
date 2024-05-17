@@ -7,4 +7,8 @@ public interface IStudentsRepository
     IEnumerable<DBStudentsModels> GetStudent();
     DBStudentsModels GetStudentById(string identidade);
     DBStudentsModels SaveStudent(DBStudentsModels newStudent);
+
+    bool DeleteStudent(DBStudentsModels student);
+
+    DBStudentsModels UpdateStudent(DBStudentsModels student);
 }

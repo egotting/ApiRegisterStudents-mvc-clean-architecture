@@ -8,31 +8,29 @@ namespace Crudv3.Models;
 public class DBStudentsModels
 {
 
-    [Key] public Guid Id { get; set; }
+  [Key] public Guid Id { get; set; }
 
-    public string? FirstName { get; set; }
-    public string? LastName { get; set; }
+  [Required]public string FirstName { get; set; }
+  [Required]public string LastName { get; set; }
 
-    public int? Age { get; set; }
+  [Required]  public int Age { get; set; }
 
 
-    public string? Identidade { get; set; }
+  [Required]public string Identidade { get; set; }
 
-    public string? Matricula { get; set; }
-    
+  [Required]public string Matricula { get; set; }
 
-    public DBStudentsModels()
-    {
-    }
-    [JsonConstructor]
-    public DBStudentsModels(string? firstName, string? lastName, int? age, string? identidade, string? matricula)
-    {
-        Id = Guid.NewGuid();
-        firstName = FirstName;
-        lastName = LastName;
-        age = Age;
-        identidade = Identidade;
-        matricula = Matricula;
-    }
 
+  public DBStudentsModels()
+  {
+  }
+  public DBStudentsModels(string firstName, string lastName, int age, string identidade, string matricula)
+  {
+    Id = Guid.NewGuid();
+    FirstName = firstName;
+    LastName = lastName ; 
+    Age = age;
+    Identidade = identidade;
+    Matricula = matricula;
+  }
 }

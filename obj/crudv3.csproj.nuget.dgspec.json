@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/ego/src/github.com/fantaasyyy/crudv3/crudv3/crudv3.csproj": {}
+    "/home/ego/src/github.com/fantaasyyy/ApiRegisterStudents-mvc-clean-architecture/crudv3.csproj": {}
   },
   "projects": {
-    "/home/ego/src/github.com/fantaasyyy/crudv3/crudv3/crudv3.csproj": {
+    "/home/ego/src/github.com/fantaasyyy/ApiRegisterStudents-mvc-clean-architecture/crudv3.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/ego/src/github.com/fantaasyyy/crudv3/crudv3/crudv3.csproj",
+        "projectUniqueName": "/home/ego/src/github.com/fantaasyyy/ApiRegisterStudents-mvc-clean-architecture/crudv3.csproj",
         "projectName": "crudv3",
-        "projectPath": "/home/ego/src/github.com/fantaasyyy/crudv3/crudv3/crudv3.csproj",
+        "projectPath": "/home/ego/src/github.com/fantaasyyy/ApiRegisterStudents-mvc-clean-architecture/crudv3.csproj",
         "packagesPath": "/home/ego/.nuget/packages/",
-        "outputPath": "/home/ego/src/github.com/fantaasyyy/crudv3/crudv3/obj/",
+        "outputPath": "/home/ego/src/github.com/fantaasyyy/ApiRegisterStudents-mvc-clean-architecture/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/ego/.nuget/NuGet/NuGet.Config"
@@ -38,10 +38,6 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
-            "Microsoft.AspNetCore.OpenApi": {
-              "target": "Package",
-              "version": "[8.0.3, )"
-            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.0, )"
@@ -72,6 +68,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.4, 8.0.4]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -80,7 +82,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.103/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.104/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

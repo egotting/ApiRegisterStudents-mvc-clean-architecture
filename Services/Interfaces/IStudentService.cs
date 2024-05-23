@@ -6,7 +6,7 @@ namespace crudv3.Services.Interfaces;
 public interface IStudentService
 {
     IEnumerable<StudentResponseDTO> GetAll();
-    DBStudentsModels GetStudentById(string identidade);
+    Student GetStudentById(string identidade);
 
     StudentResponseDTO SaveStudent(StudentRequestDTO studentResponseDto);
 

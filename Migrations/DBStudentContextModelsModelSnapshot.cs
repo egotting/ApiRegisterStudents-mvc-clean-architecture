@@ -10,7 +10,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace crudv3.Migrations
 {
-    [DbContext(typeof(DBStudentContextModels))]
+    [DbContext(typeof(DBContext))]
     partial class DBStudentContextModelsModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
@@ -22,7 +22,35 @@ namespace crudv3.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-            modelBuilder.Entity("Crudv3.Models.DBStudentsModels", b =>
+            modelBuilder.Entity("Crudv3.Models.Professor", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("Age")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("FirstName")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Identidade")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("LastName")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Professors");
+                });
+
+            modelBuilder.Entity("Crudv3.Models.Student", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -49,7 +77,7 @@ namespace crudv3.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("DBStudents");
+                    b.ToTable("Students");
                 });
 #pragma warning restore 612, 618
         }

@@ -1,11 +1,6 @@
-using crudv3.Exceptions;
-using Crudv3.Models;
 using Crudv3.Models.DTO.Student;
-using crudv3.Repository.interfaces;
-using crudv3.Services;
 using crudv3.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 
 namespace Crudv3.Controllers;
 
@@ -27,7 +22,7 @@ public class StudentsController : ControllerBase
     [Route("/student")]
     public IActionResult GetAll()
     {
-        return Ok(_service?.GetAll());
+        return Ok(_service.GetAll());
     }
 
     [HttpGet]

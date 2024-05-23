@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "d5BIe7tHC7DOVB05so4K7SXh5P1EbpYKwuzcn+GKwXJJBAFch6Cly2W+vsYal7cAStlQlzEuHnMYGT+fIdlBhA==",
+  "dgSpecHash": "ef+++kloorPIwW7HjWNZLgEJG6jJ1rsSz1e6IPPIwFbMOvQPOYa/rZlYRBaIsXiQC26mldLyp9GJof6W6Y/NaQ==",
   "success": true,
   "projectFilePath": "/home/ego/src/github.com/fantaasyyy/ApiRegisterStudents-mvc-clean-architecture/crudv3.csproj",
   "expectedPackageFiles": [
@@ -51,7 +51,7 @@
     "/home/ego/.nuget/packages/system.text.encodings.web/8.0.0/system.text.encodings.web.8.0.0.nupkg.sha512",
     "/home/ego/.nuget/packages/system.text.json/8.0.0/system.text.json.8.0.0.nupkg.sha512",
     "/home/ego/.nuget/packages/system.threading.channels/6.0.0/system.threading.channels.6.0.0.nupkg.sha512",
-    "/home/ego/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.4/microsoft.aspnetcore.app.ref.8.0.4.nupkg.sha512"
+    "/home/ego/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.5/microsoft.aspnetcore.app.ref.8.0.5.nupkg.sha512"
   ],
   "logs": []
 }

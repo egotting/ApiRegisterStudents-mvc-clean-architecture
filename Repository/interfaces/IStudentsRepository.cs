@@ -4,11 +4,11 @@ namespace crudv3.Repository.interfaces;
 
 public interface IStudentsRepository
 {
-    IEnumerable<DBStudentsModels> GetStudent();
-    DBStudentsModels GetStudentById(string identidade);
-    DBStudentsModels SaveStudent(DBStudentsModels newStudent);
+    IEnumerable<Student> GetStudent();
+    Student GetStudentById(string identidade);
+    Student SaveStudent(Student newStudent);
 
-    bool DeleteStudent(DBStudentsModels student);
+    bool DeleteStudent(Student student);
 
-    DBStudentsModels UpdateStudent(DBStudentsModels student);
+    Student UpdateStudent(Student student);
 }

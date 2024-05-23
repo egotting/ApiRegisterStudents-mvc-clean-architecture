@@ -8,40 +8,40 @@ namespace crudv3.Repository;
 
 public class StudentRepository : IStudentsRepository
 {
-    public readonly DBStudentContextModels _context;
+    public readonly DBContext _context;
 
-    public StudentRepository(DBStudentContextModels context)
+    public StudentRepository(DBContext context)
     {
         _context = context;
     }
 
-    public IEnumerable<DBStudentsModels> GetStudent()
+    public IEnumerable<Student> GetStudent()
     {
-        return _context.DBStudents.ToList();
+        return _context.Students.ToList();
     }
 
-    public DBStudentsModels GetStudentById(string identidade)
+    public Student GetStudentById(string identidade)
     {
-        return _context.DBStudents.Where(d => d.Identidade == identidade)
+        return _context.Students.Where(d => d.Identidade == identidade)
                    .FirstOrDefault(x => x.Identidade == identidade) ??
                throw new NotFoundStudent("Not found this student");
     }
 
-    public DBStudentsModels SaveStudent(DBStudentsModels newStudent)
+    public Student SaveStudent(Student newStudent)
     {
-        _context.DBStudents.Add(newStudent);
+        _context.Students.Add(newStudent);
         _context.SaveChangesAsync();
         return newStudent;
     }
 
-    public bool DeleteStudent(DBStudentsModels student)
+    public bool DeleteStudent(Student student)
     {
-        _context.DBStudents.Remove(student);
+        _context.Students.Remove(student);
         _context.SaveChanges();
         return true;
     }
 
-    public DBStudentsModels UpdateStudent(DBStudentsModels student)
+    public Student UpdateStudent(Student student)
     {
         _context.Entry(student).State = EntityState.Modified;
         _context.SaveChanges();

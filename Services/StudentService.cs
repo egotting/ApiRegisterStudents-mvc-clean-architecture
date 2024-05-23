@@ -24,7 +24,7 @@ public class StudentService : IStudentService
     }
 
 
-    public DBStudentsModels GetStudentById(string identidade)
+    public Student GetStudentById(string identidade)
     {
         var studentById = _studentsRepository.GetStudentById(identidade) ??
                           throw new NotFoundStudent("Estudante n achado");
@@ -35,7 +35,7 @@ public class StudentService : IStudentService
 
     public StudentResponseDTO SaveStudent(StudentRequestDTO studentRequestDto)
     {
-        var student = new DBStudentsModels(studentRequestDto.FirstName, studentRequestDto.LastName,
+        var student = new Student(studentRequestDto.FirstName, studentRequestDto.LastName,
             studentRequestDto.Age, studentRequestDto.Identidade, studentRequestDto.Matricula);
         student = _studentsRepository.SaveStudent(student);
 

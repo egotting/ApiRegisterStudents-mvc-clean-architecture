@@ -11,7 +11,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace crudv3.Migrations
 {
-    [DbContext(typeof(DBStudentContextModels))]
+    [DbContext(typeof(DBContext))]
     [Migration("20240503164604_SixMigration")]
     partial class SixMigration
     {

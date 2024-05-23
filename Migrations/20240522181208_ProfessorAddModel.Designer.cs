@@ -12,8 +12,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace crudv3.Migrations
 {
     [DbContext(typeof(DBContext))]
-    [Migration("20240517143758_TenMigration")]
-    partial class TenMigration
+    [Migration("20240522181208_ProfessorAddModel")]
+    partial class ProfessorAddModel
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -53,6 +53,34 @@ namespace crudv3.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("DBStudents");
+                });
+
+            modelBuilder.Entity("Crudv3.Models.Professor", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("Age")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("FirstName")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Identidade")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("LastName")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Professors");
                 });
 #pragma warning restore 612, 618
         }

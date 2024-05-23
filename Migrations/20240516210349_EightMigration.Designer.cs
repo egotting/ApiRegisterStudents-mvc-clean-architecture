@@ -11,7 +11,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace crudv3.Migrations
 {
-    [DbContext(typeof(DBStudentContextModels))]
+    [DbContext(typeof(DBContext))]
     [Migration("20240516210349_EightMigration")]
     partial class EightMigration
     {
